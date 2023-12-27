@@ -1,0 +1,122 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+#scene-tabbar, #scene-body {
+  min-height: 100vh;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#scene-tabbar {
+  background: linear-gradient(90deg, rgb(65, 200, 65), rgb(158, 32, 181), rgba(11, 55, 84, 1));
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s linear infinite; /* Adjust the animation duration as needed */
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: scroll;
+}
+
+
+
+#scene-tabbar #my-img {
+  width: 70%;
+  border-radius: 100%;
+}
+
+.list-view img {
+  width: 40px;
+}
+
+.list-view a {
+  color: white;
+}
+
+.contact-item {
+  display: inline;
+  color: black;
+  font-size: 2em;
+  margin: 0 0.4em 0 0.4em;
+}
+
+#scene-tabbar .list-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#scene-tabbar .list-item {
+  padding: 0.5em;
+  margin: 0.2em;
+  background-color: #3fb765;
+  width: 90%;
+}
+
+#scene-tabbar .list-item:hover {
+  background-color:#4eb557;
+  cursor: pointer;
+}
+
+#scene-body {
+  background-color: #562f5d;
+  height: inherit;
+  font-size: 1em;
+  height: 100vh;
+  overflow: scroll;
+}
+
+@media only screen and (max-width: 777px) {
+  #scene-tabbar {
+    height: 100%;
+    overflow: unset;
+  }
+  #scene-body {
+    height: 100%;
+    overflow: unset;
+  }
+}
+
+
+#scene-body .col {
+  font-size: 1em;
+}
+
+#scene-body section {
+  display: none;
+}
+
+.col-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.project-card {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card img, .project-card video {
+  padding: 1em;
+  width: 100%;
+  border-radius: 2em;
+}
